@@ -11,7 +11,7 @@ const Contact = () => {
             <h4>Connect</h4>
             <p>
               <a
-                href="https://www.linkedin.com/in/akashrmalhotra/"
+                href="https://www.linkedin.com/in/mohd-musab-0aab97275/"
                 target="_blank"
                 rel="noreferrer"
                 data-cursor="disable"
