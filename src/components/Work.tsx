@@ -14,12 +14,20 @@ const projects = [
 
 
   {
-    title: "Orrdr.com",
-    category: "Ecommerce Platform and Mobile App",
-    tools: "Ecommerce, Mobile Experience, Order Management",
-    image: "/images/orrdr.png",
-    link: "https://orrdr.com",
+    title: "AI Lie Detector",
+    category: "AI Lie Detector",
+    tools: "",
+    image: "/images/AI Lie Detector.png",
+    link: "https://lie-detector-six.vercel.app/",
   },
+  {
+    title: "Study Sheild",
+    category: "AI-Powered Educational Platform",
+    tools: "AI, ",
+    image: "/images/Study Shield.png",
+    link: "https://study-shield-ypi1.vercel.app/",
+  },
+
 ];
 
 const Work = () => {

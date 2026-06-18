@@ -87,16 +87,19 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-           <h3>FULL STACK & AI DEVELOPER</h3>
-           <h4>Building Scalable Web & AI Solutions</h4>
-           <p>
-           I am a developer skilled in full-stack mern development and AI integration. 
-           I build modern web applications using React, Node.js, and databases, 
-           and integrate AI features like chatbots, automation, and APIs to solve real-world problems.
-           </p>
+              <h3>FULL STACK DEVELOPER</h3>
+              <h4>Building Scalable Web Applications</h4>
+              <p>
+                I am a developer skilled in full-stack development and AI integration.
+                I build modern web applications using React, Node.js, and databases,
+                and integrate AI features like chatbots, automation, and APIs to solve real-world problems.
+              </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">React</div>
+                <div className="what-tags">next.js</div>
+                <div className="what-tags">Typescript</div>
+                <div className="what-tags">Docker</div>
                 <div className="what-tags">Node.js</div>
                 <div className="what-tags">MongoDB</div>
                 <div className="what-tags">Express</div>
@@ -127,16 +130,16 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
             <div className="what-content-in">
               <h3>SOFTWARE DEVELOPER & AI ENTHUSIAST</h3>
-             <h4>Turning Ideas into Real-World Applications</h4>
-             <p>
-             I build modern web applications and smart AI-powered solutions that solve real-world problems. 
-             From designing responsive user interfaces to developing scalable backend systems, 
-             I focus on creating efficient, user-friendly, and impactful products.
-             </p>
+              <h4>Turning Ideas into Real-World Applications</h4>
+              <p>
+                I build modern web applications and smart AI-powered solutions that solve real-world problems.
+                From designing responsive user interfaces to developing scalable backend systems,
+                I focus on creating efficient, user-friendly, and impactful products.
+              </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Node.js</div>
-                 <div className="what-tags">Next.js</div>
+                <div className="what-tags">Next.js</div>
                 <div className="what-tags">Python</div>
                 <div className="what-tags">REST &amp; real-time APIs</div>
                 <div className="what-tags">MongoDB</div>
