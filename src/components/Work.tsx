@@ -3,7 +3,24 @@ import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
-const projects = [
+type Project = {
+  title: string;
+  category: string;
+  tools: string;
+  image: string;
+  link: string;
+};
+
+const projects: Project[] = [
+  {
+    title: "ShopNest",
+    category: "Full-Stack MERN E-Commerce Platform",
+    tools:
+      "MERN Stack, Redux Toolkit, Razorpay, Cloudinary, JWT Authentication",
+    image: "/images/shopnest.png",
+    link: "https://shopnest-ecom-mern-pkyy.onrender.com/",
+  },
+
   {
     title: "FIN-AI",
     category: "AI-Powered Financial Assistant",
@@ -11,37 +28,34 @@ const projects = [
     image: "/images/fin-ai.png",
     link: "https://fin-ai0.vercel.app",
   },
-
-
   {
-    title: "AI Lie Detector",
-    category: "AI Lie Detector",
-    tools: "",
-    image: "/images/AI Lie Detector.png",
-    link: "https://lie-detector-six.vercel.app/",
-  },
-  {
-    title: "Study Sheild",
-    category: "AI-Powered Educational Platform",
-    tools: "AI, ",
-    image: "/images/Study Shield.png",
+    title: "Study Shield",
+    category: "Educational Platform",
+    tools: "React, Node.js, MongoDB, Authentication",
+    image: "/images/StudyShield.png",
     link: "https://study-shield-ypi1.vercel.app/",
   },
-
+  {
+    title: "AI Lie Detector",
+    category: "AI-Based Truth Detection System",
+    tools: "React, Node.js, Express, AI Analysis",
+    image: "/images/AI-Lie-Detector.png",
+    link: "https://lie-detector-six.vercel.app/",
+  },
 ];
 
 const Work = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
   const goToSlide = useCallback(
     (index: number) => {
       if (isAnimating) return;
       setIsAnimating(true);
       setCurrentIndex(index);
-      setTimeout(() => setIsAnimating(false), 500);
+      window.setTimeout(() => setIsAnimating(false), 500);
     },
-    [isAnimating]
+    [isAnimating],
   );
 
   const goToPrev = useCallback(() => {
@@ -64,7 +78,6 @@ const Work = () => {
         </h2>
 
         <div className="carousel-wrapper">
-          {/* Navigation Arrows */}
           <button
             className="carousel-arrow carousel-arrow-left"
             onClick={goToPrev}
@@ -73,6 +86,7 @@ const Work = () => {
           >
             <MdArrowBack />
           </button>
+
           <button
             className="carousel-arrow carousel-arrow-right"
             onClick={goToNext}
@@ -82,7 +96,6 @@ const Work = () => {
             <MdArrowForward />
           </button>
 
-          {/* Slides */}
           <div className="carousel-track-container">
             <div
               className="carousel-track"
@@ -91,23 +104,23 @@ const Work = () => {
               }}
             >
               {projects.map((project, index) => (
-                <div className="carousel-slide" key={index}>
+                <div className="carousel-slide" key={project.title}>
                   <div className="carousel-content">
                     <div className="carousel-info">
                       <div className="carousel-number">
                         <h3>0{index + 1}</h3>
                       </div>
+
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
-                        <p className="carousel-category">
-                          {project.category}
-                        </p>
+                        <p className="carousel-category">{project.category}</p>
                         <div className="carousel-tools">
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
                       </div>
                     </div>
+
                     <div className="carousel-image-wrapper">
                       <WorkImage
                         image={project.image}
@@ -121,13 +134,13 @@ const Work = () => {
             </div>
           </div>
 
-          {/* Dot Indicators */}
           <div className="carousel-dots">
             {projects.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
+                className={`carousel-dot ${
+                  index === currentIndex ? "carousel-dot-active" : ""
+                }`}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to project ${index + 1}`}
                 data-cursor="disable"
