@@ -21,7 +21,7 @@ const Career = () => {
               <h3>NOW</h3>
             </div>
             <p>
-             I am currently working full stack mern stack developer and genrative ai and learning new technologies to enhance my skills and knowledge in the field of web development. I am passionate about creating innovative and efficient solutions to real-world problems through technology.
+             I am currently working full stack mern stack developer  and learning new technologies to enhance my skills and knowledge in the field of web development. I am passionate about creating innovative and efficient solutions to real-world problems through technology.
             </p>
           </div>
    
